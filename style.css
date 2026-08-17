@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f4f6f8;
+    color: #2d2d2d;
+    margin: 0;
+}
+
+main {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation */
+nav {
+    background: white;
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+nav .logo {
+    font-weight: 700;
+    font-size: 18px;
+    color: #2d2d2d;
+    text-decoration: none;
+}
+
+nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+}
+
+nav .nav-links span {
+    color: #777;
+}
+
+/* Post preview cards (index.php) */
+.post-preview {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 16px;
+}
+
+.post-preview img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.post-preview h2 {
+    margin: 0 0 6px 0;
+    font-size: 20px;
+}
+
+.meta {
+    color: #888;
+    font-size: 13px;
+    margin: 0 0 12px 0;
+}
+
+/* Full post (post.php) */
+.post-full img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 16px;
+}
+
+.post-full h1 {
+    margin-bottom: 4px;
+}
+
+.post-full .content {
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+.admin-actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.admin-actions a {
+    background: #eef4fd;
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+
+.admin-actions a:last-child {
+    background: #fdeeee;
+    color: #d9534f;
+}
+
+/* Comments */
+.comments {
+    margin-top: 40px;
+}
+
+.comment {
+    background: white;
+    padding: 14px 18px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 10px;
+}
+
+.comment.pending {
+    background: #fffaf0;
+    border: 1px dashed #e0a800;
+}
+
+.badge {
+    display: inline-block;
+    background: #fff3cd;
+    color: #a97a00;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+}
+
+/* Pending comments admin page */
+.pending-comment {
+    background: white;
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 14px;
+}
+
+.pending-comment .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.pending-comment .actions form {
+    margin: 0;
+}
+
+/* Forms */
+form {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+textarea {
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4a90e2;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.current-image {
+    max-width: 200px;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+}
+
+button {
+    background: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+}
+
+button:hover {
+    background: #3a7bc8;
+}
+
+button.approve {
+    background: #5cb85c;
+}
+
+button.approve:hover {
+    background: #4a9d4a;
+}
+
+button.reject {
+    background: #d9534f;
+}
+
+button.reject:hover {
+    background: #c9302c;
+}
+
+.error {
+    color: #d9534f;
+    background: #fdeeee;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.auth-page {
+    max-width: 360px;
+    margin: 40px auto 0;
+    text-align: center;
+}
+
+.auth-page form {
+    text-align: left;
+}
+
+.auth-page p {
+    margin-top: 16px;
+}

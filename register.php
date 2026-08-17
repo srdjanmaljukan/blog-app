@@ -41,25 +41,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Register</h1>
+    <div class="auth-page">
+        <h1>Register</h1>
 
-    <?php if ($error_message !== ''): ?>
-        <p class="error"><?= htmlspecialchars($error_message) ?></p>
-    <?php endif; ?>
+        <?php if ($error_message !== ''): ?>
+            <p class="error"><?= htmlspecialchars($error_message) ?></p>
+        <?php endif; ?>
 
-    <form method="POST" action="register.php">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit">Register</button>
-    </form>
+        <form method="POST" action="register.php">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
 
-    <a href="login.php">Already have an account? Login</a>
+        <p><a href="login.php">Already have an account? Login</a></p>
+    </div>
 </body>
+
 </html>
